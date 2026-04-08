@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian Oakley | Technology &amp; Transformation Executive</title>
+  <meta
+    name="description"
+    content="Executive profile for Brian Oakley, highlighting enterprise technology strategy, multi-site operating leadership, acquisitions integration, cybersecurity, data modernization, and AI-enabled growth."
+  >
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: rgba(15, 23, 42, 0.1);
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: rgba(255, 255, 255, 0.96);
+      --accent: #335c8d;
+      --accent-strong: #173a63;
+      --mist: #e8f0fb;
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      --bg:
+        radial-gradient(circle at top right, rgba(51, 92, 141, 0.1), transparent 28%),
+        linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+      --quote: #172554;
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    html[data-theme="dark"] {
+      --ink: #e2e8f0;
+      --muted: #94a3b8;
+      --line: rgba(148, 163, 184, 0.2);
+      --surface: rgba(15, 23, 42, 0.86);
+      --surface-strong: rgba(2, 6, 23, 0.92);
+      --accent: #7da8d6;
+      --accent-strong: #93c5fd;
+      --mist: rgba(30, 41, 59, 0.92);
+      --shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+      --bg:
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 26%),
+        linear-gradient(180deg, #020617 0%, #0f172a 100%);
+      --quote: #dbeafe;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--surface-strong) 82%, transparent);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand strong {
+      font-size: 1.08rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .nav a {
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 140ms ease, border-color 140ms ease;
+    }
+
+    .nav a.active {
+      color: var(--accent-strong);
+      border-color: color-mix(in srgb, var(--accent-strong) 48%, transparent);
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--accent-strong);
+      border-color: color-mix(in srgb, var(--accent-strong) 35%, transparent);
+      outline: none;
+    }
+
+    .theme-toggle {
+      margin-left: 8px;
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
+      background: color-mix(in srgb, var(--surface) 70%, transparent);
+      color: var(--muted);
+      cursor: pointer;
+      transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+    }
+
+    .theme-toggle:hover,
+    .theme-toggle:focus-visible {
+      color: var(--accent-strong);
+      background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
+      border-color: color-mix(in srgb, var(--accent-strong) 24%, transparent);
+      outline: none;
+    }
+
+    .theme-toggle svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .sun-icon { display: none; }
+    html[data-theme="dark"] .sun-icon { display: block; }
+    html[data-theme="dark"] .moon-icon { display: none; }
+
+    main {
+      padding: 36px 0 72px;
+    }
+
+    section {
+      margin: 0 0 28px;
+      scroll-margin-top: 108px;
+    }
+
+    .hero {
+      padding: 48px;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--surface-strong) 98%, transparent), color-mix(in srgb, var(--surface) 95%, transparent)),
+        var(--surface);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 28px;
+    }
+
+    .eyebrow,
+    .section-label {
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--accent-strong);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.9fr);
+      gap: 28px;
+      align-items: end;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      max-width: 10ch;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 3vw, 2.65rem);
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .lede {
+      font-size: 1.25rem;
+      max-width: 56rem;
+      color: var(--ink);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button,
+    .button-secondary {
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    .button {
+      background: var(--accent-strong);
+      color: var(--surface-strong);
+    }
+
+    .button-secondary {
+      background: color-mix(in srgb, var(--surface-strong) 72%, transparent);
+      border-color: color-mix(in srgb, var(--accent-strong) 18%, transparent);
+      color: var(--accent-strong);
+    }
+
+    .button:hover,
+    .button-secondary:hover,
+    .button:focus-visible,
+    .button-secondary:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .hero-card,
+    .panel,
+    .timeline-item,
+    .feature-card,
+    .quote-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 24px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 14px;
+    }
+
+    .metric {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .grid-2,
+    .grid-3 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .panel,
+    .quote-card,
+    .feature-card,
+    .timeline-item {
+      padding: 28px;
+    }
+
+    .panel p + p {
+      margin-top: 14px;
+    }
+
+    .panel ul {
+      margin: 16px 0 0;
+      padding-left: 22px;
+    }
+
+    .pill-list,
+    .mini-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: var(--mist);
+      color: var(--accent-strong);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .mini-list span {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 7px 10px;
+      background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      max-width: 42rem;
+    }
+
+    .feature-card p,
+    .timeline-item p {
+      font-size: 0.98rem;
+    }
+
+    .case-structure {
+      margin-top: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .case-block strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .case-block p {
+      font-size: 0.97rem;
+    }
+
+    .career-overview {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .career-explorer {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.4fr);
+      align-items: start;
+    }
+
+    .timeline-control {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-control-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .timeline-date {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-strong);
+    }
+
+    .timeline-slider {
+      width: 100%;
+      appearance: none;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 24%, transparent), color-mix(in srgb, var(--accent-strong) 45%, transparent));
+      outline: none;
+    }
+
+    .timeline-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 2px solid var(--surface-strong);
+      background: var(--accent-strong);
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.18);
+      cursor: pointer;
+    }
+
+    .timeline-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 2px solid var(--surface-strong);
+      background: var(--accent-strong);
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.18);
+      cursor: pointer;
+    }
+
+    .timeline-marks {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .timeline-summary {
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline-summary-item {
+      width: 100%;
+      text-align: left;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface-strong) 70%, transparent);
+      transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .timeline-summary-item.priority {
+      border-left: 3px solid color-mix(in srgb, var(--accent-strong) 36%, transparent);
+      background: linear-gradient(90deg, color-mix(in srgb, var(--mist) 32%, transparent), color-mix(in srgb, var(--surface-strong) 88%, transparent));
+    }
+
+    .timeline-summary-item.active {
+      border-color: color-mix(in srgb, var(--accent-strong) 55%, transparent);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--mist) 92%, transparent), color-mix(in srgb, var(--surface-strong) 94%, transparent));
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-strong) 20%, transparent);
+      transform: translateY(-1px);
+    }
+
+    .timeline-summary-item.priority.active {
+      border-left-color: var(--accent-strong);
+      box-shadow:
+        inset 0 0 0 1px color-mix(in srgb, var(--accent-strong) 20%, transparent),
+        inset 3px 0 0 color-mix(in srgb, var(--accent-strong) 72%, transparent);
+    }
+
+    .timeline-summary-item:hover,
+    .timeline-summary-item:focus-visible {
+      border-color: color-mix(in srgb, var(--accent-strong) 28%, transparent);
+      background: color-mix(in srgb, var(--mist) 52%, transparent);
+      outline: none;
+    }
+
+    .timeline-summary-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .timeline-summary-item span {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-strong);
+      margin-bottom: 8px;
+    }
+
+    .timeline-summary-item small {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--mist) 88%, transparent);
+      color: var(--accent-strong);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .timeline-role-title {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .timeline-role-title .period {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-strong);
+    }
+
+    .timeline-detail-list {
+      margin: 16px 0 0;
+      padding-left: 22px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .feature-meta,
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--mist);
+      color: var(--accent-strong);
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.28rem;
+      color: var(--ink);
+    }
+
+    .quote-card blockquote {
+      margin: 0;
+      font-size: 1.42rem;
+      line-height: 1.45;
+      color: var(--quote);
+    }
+
+    .contact-cta {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, color-mix(in srgb, var(--mist) 88%, transparent), transparent 42%),
+        linear-gradient(135deg, color-mix(in srgb, var(--surface-strong) 96%, transparent), color-mix(in srgb, var(--surface) 92%, transparent));
+      border: 1px solid color-mix(in srgb, var(--accent-strong) 16%, var(--line));
+    }
+
+    .contact-cta::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-strong) 8%, transparent);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface-strong) 78%, transparent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      border-color: color-mix(in srgb, var(--accent-strong) 30%, transparent);
+      background: color-mix(in srgb, var(--mist) 66%, transparent);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .contact-link span:last-child {
+      color: var(--accent-strong);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .footer {
+      padding: 30px 0 60px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .panel,
+      .quote-card,
+      .feature-card,
+      .timeline-item { padding: 22px; }
+
+      .hero-grid,
+      .career-overview,
+      .career-explorer,
+      .grid-2,
+      .grid-3 { grid-template-columns: 1fr; }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .topbar-inner {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 24px;
+      }
+
+      .nav {
+        justify-content: start;
+      }
+
+      .lede {
+        font-size: 1.08rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#top">
+        <strong>Brian Oakley</strong>
+        <span>Technology &amp; Transformation Executive</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#transformations">Transformations</a>
+        <a href="#career">Career</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#snapshot">Snapshot</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <span class="sr-only">Toggle color theme</span>
+          <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.2 14.1A8.7 8.7 0 0 1 9.9 3.8a.7.7 0 0 0-.95-.8A9.7 9.7 0 1 0 21 15.05a.7.7 0 0 0-.8-.95Z"></path>
+          </svg>
+          <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <path d="M12 2.75v2.1M12 19.15v2.1M21.25 12h-2.1M4.85 12h-2.1M18.54 5.46l-1.49 1.49M6.95 17.05l-1.49 1.49M18.54 18.54l-1.49-1.49M6.95 6.95L5.46 5.46"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="eyebrow">Executive Leadership Profile</span>
+      <div class="hero-grid">
+        <div>
+          <h1 id="hero-title">Brian Oakley</h1>
+          <p class="lede">
+            Chief Information Officer leadership for growth-oriented, multi-site organizations that need stronger technology strategy, secure operating scale, acquisition integration, and data-driven performance improvement.
+          </p>
+          <div class="mini-list" aria-label="Positioning pillars">
+            <span>CIO / Enterprise Technology Executive</span>
+            <span>Multi-Site Operating Model Leader</span>
+            <span>Data, Analytics &amp; AI Strategist</span>
+            <span>Private Equity Growth Operator</span>
+          </div>
+          <div class="mini-list" aria-label="Executive leadership themes" style="margin-top: 12px;">
+            <span>Board-facing technology leadership</span>
+            <span>M&amp;A integration leadership</span>
+            <span>Cybersecurity &amp; compliance oversight</span>
+            <span>Patient and clinician enablement mindset</span>
+          </div>
+          <div class="cta-row" style="margin-top: 24px;">
+            <a class="button" href="#transformations">View Transformation Work</a>
+            <a class="button-secondary" href="#career">Explore Career Timeline</a>
+            <a class="button-secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Executive positioning highlights">
+          <div>
+            <span class="section-label">Positioning</span>
+            <p style="margin-top: 10px;">
+              A CIO-oriented executive profile focused on strengthening growing operating platforms through secure infrastructure, scalable enterprise systems, disciplined integration, actionable data, and measurable technology-enabled value creation.
+            </p>
+          </div>
+          <div class="metrics">
+            <div class="metric">
+              <strong>Enterprise technology strategy</strong>
+              <p>Translates business priorities into multi-year technology, data, and AI roadmaps that support growth, integration, and operational discipline.</p>
+            </div>
+            <div class="metric">
+              <strong>Regulated, multi-site operating leadership</strong>
+              <p>Builds and matures IT, analytics, security, and operating model capability in environments where reliability, compliance, and service quality matter.</p>
+            </div>
+            <div class="metric">
+              <strong>Integration and value creation</strong>
+              <p>Combines executive direction with operating depth to reduce integration risk, improve visibility, and turn technology into measurable business leverage.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">About</span>
+          <h2>Executive narrative, not resume bullets</h2>
+        </div>
+        <p>
+          Built to give executive recruiters, Boards, CEOs, and leadership teams a fast, credible view of leadership scope, operating range, and transformation capability.
+        </p>
+      </div>
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Professional Identity</h3>
+          <p>
+            Brian Oakley is a technology and transformation executive positioned for Chief Information Officer roles where business performance depends on stronger technology direction, scalable systems, disciplined modernization, and high-trust executive leadership.
+          </p>
+          <p>
+            He brings the combination many organizations need at the executive level: strategic judgment, enterprise architecture fluency, operating model discipline, and the ability to translate leadership intent into organizational capability across infrastructure, applications, data, security, and process.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Why the background is relevant</h3>
+          <p>
+            His career arc reflects increasing scope, ambiguity, and executive accountability across enterprise reporting, research-grade technical environments, operational recovery, institutional platform discipline, founder-level execution, investment-context transformation, and AI-enabled operating infrastructure.
+          </p>
+          <p>
+            That progression is especially relevant for organizations growing through acquisitions and standardization because it shows repeated success building structure, reducing fragmentation, and strengthening leadership visibility in imperfect environments.
+          </p>
+          <div class="pill-list" aria-label="Industries worked in">
+            <span class="pill">Logistics</span>
+            <span class="pill">Defense &amp; Research</span>
+            <span class="pill">Multi-site services</span>
+            <span class="pill">Asset Management</span>
+            <span class="pill">Real Estate</span>
+            <span class="pill">Private Equity</span>
+          </div>
+        </article>
+      </div>
+      <div class="grid-2" style="margin-top: 20px;">
+        <article class="panel">
+          <h3>Operating Style</h3>
+          <p>
+            Brian operates as an executive leader who can move comfortably between Board-level framing, enterprise prioritization, and the practical realities of execution. His value is not that he wants to stay buried in implementation. It is that he understands execution deeply enough to lead it credibly at the highest levels, especially in environments where system complexity, operating change, and organizational trust intersect.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Executive Scope</h3>
+          <p>
+            The platform is designed to show experience across enterprise technology strategy, IT operating model buildout, cloud and platform modernization, cybersecurity and compliance-aware execution, data platform strategy, AI deployment, acquisition integration, and external advisory work.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">Capabilities</span>
+          <h2>Executive capability areas</h2>
+        </div>
+        <p>
+          A concise scan of the leadership strengths most relevant to scaled, acquisition-driven, regulated operating environments.
+        </p>
+      </div>
+      <div class="grid-3">
+        <article class="feature-card"><h3>Enterprise Technology Strategy</h3><p>Defines clear, sequenced roadmaps across infrastructure, applications, data, analytics, and AI aligned to growth and value creation.</p></article>
+        <article class="feature-card"><h3>Multi-Site Operating Model Leadership</h3><p>Builds governance, standards, service management, and technology operating rhythm that can scale across distributed locations and acquisitions.</p></article>
+        <article class="feature-card"><h3>Cloud, Platform &amp; Integration Leadership</h3><p>Leads platform modernization, enterprise integration, and scalable operating infrastructure with an emphasis on resilience, performance, and control.</p></article>
+        <article class="feature-card"><h3>Data, Analytics &amp; AI Enablement</h3><p>Builds decision-grade data environments and turns analytics and automation into measurable operational improvement.</p></article>
+        <article class="feature-card"><h3>Cybersecurity, Compliance &amp; Risk</h3><p>Brings compliance-aware execution, governance discipline, and executive attention to risk, resiliency, and control environments.</p></article>
+        <article class="feature-card"><h3>M&amp;A Due Diligence &amp; Integration</h3><p>Reduces integration risk by standardizing playbooks, sequencing decisions, and building repeatable post-acquisition operating structure.</p></article>
+      </div>
+    </section>
+
+    <section id="transformations">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">Transformations</span>
+          <h2>Relevant leadership examples</h2>
+        </div>
+        <p>
+          Selected examples that show how Brian leads technology as an enterprise capability: setting direction, organizing teams, modernizing platforms, and delivering measurable operating leverage in complex environments.
+        </p>
+      </div>
+      <div class="grid-2" style="margin-bottom: 20px;">
+        <article class="panel">
+          <h3>What these examples are meant to show</h3>
+          <p>
+            These are not project summaries in isolation. Together they show a repeatable executive pattern: enter a fragmented or scaling environment, establish clearer direction, modernize the platform foundation, improve visibility and control, and build the operating capability required for the next stage of growth.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Recurring leadership themes</h3>
+          <p>
+            Across these roles, the through-line is enterprise technology leadership tied to business outcomes: stronger reporting transparency, more disciplined operating cadence, reduced manual friction, better decision support, scalable governance, and technology-enabled value creation.
+          </p>
+        </article>
+      </div>
+      <div class="grid-3">
+        <article class="feature-card">
+          <div class="feature-meta"><span class="badge">Featured</span><span>10 Federal Storage</span></div>
+          <h3>Unified data platform, workflow modernization, and AI enablement</h3>
+          <p>Represents the clearest example of building a modern technology function and platform roadmap in a private-equity-backed operating environment.</p>
+          <div class="case-structure">
+            <div class="case-block">
+              <strong>Mandate</strong>
+              <p>Build the technology organization, modernize the core platform environment, and give the business stronger data, automation, and operating leverage as the company scaled nationally.</p>
+            </div>
+            <div class="case-block">
+              <strong>Leadership Action</strong>
+              <p>Established the department, set the roadmap, built the unified enterprise data platform, introduced cloud-based integration architecture, and deployed AI-enabled workflows tied to customer interaction and field execution.</p>
+            </div>
+            <div class="case-block">
+              <strong>Business Impact</strong>
+              <p>Improved reporting transparency and decision speed, reduced manual workload through automation, and positioned technology as a measurable contributor to scalability, responsiveness, and operating discipline.</p>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-meta"><span class="badge">Featured</span><span>Realterm</span></div>
+          <h3>Analytics platform, governance, and integration discipline</h3>
+          <p>Shows executive leadership in a rapidly expanding investment platform where technology had to support scale, control, and better decision-making across multiple business lines.</p>
+          <div class="case-structure">
+            <div class="case-block">
+              <strong>Mandate</strong>
+              <p>Guide technology strategy through a period of major enterprise growth while improving visibility, governance, operating consistency, and the maturity of the technology function.</p>
+            </div>
+            <div class="case-block">
+              <strong>Leadership Action</strong>
+              <p>Led enterprise systems strategy, data and reporting modernization, cybersecurity and governance programs, vendor management, and executive communication across operations and investment leadership.</p>
+            </div>
+            <div class="case-block">
+              <strong>Business Impact</strong>
+              <p>Supported scale from roughly $1B to $12B AUM, improved transparency into asset and platform performance, strengthened operating discipline, and built the technology organization required for a more complex enterprise.</p>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-meta"><span class="badge">Featured</span><span>Brookfield Project Knox</span></div>
+          <h3>Transaction advisory, platform evaluation, and technology-enabled efficiency strategy</h3>
+          <p>Demonstrates executive advisory leadership in a major international transaction context where technology assessment, operating leverage, and cross-functional judgment all had material strategic importance.</p>
+          <div class="case-structure">
+            <div class="case-block">
+              <strong>Mandate</strong>
+              <p>Support Brookfield in evaluating the platform of a major publicly traded self-storage operator in Australia and New Zealand as part of one of the largest real estate transactions in Australian history, with a focus on how post-transaction efficiency and value creation could be accelerated through technology enablement.</p>
+            </div>
+            <div class="case-block">
+              <strong>Leadership Action</strong>
+              <p>Led the advisory effort from the 10 Federal side, coordinating across leadership domains to evaluate the operating platform, identify where technology could improve efficiency, and synthesize the findings into an executive advisory packet delivered to Brookfield.</p>
+            </div>
+            <div class="case-block">
+              <strong>Business Impact</strong>
+              <p>Reinforced the ability to operate credibly in a high-stakes transaction environment, translating platform evaluation, business process understanding, and technology strategy into decision-ready guidance for one of the world’s largest real estate asset managers.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="career">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">Career Timeline</span>
+          <h2>Leadership progression</h2>
+        </div>
+        <p>
+          The progression below is framed around growing executive scope, system complexity, integration responsibility, and business accountability.
+        </p>
+      </div>
+      <div class="career-overview">
+        <article class="panel">
+          <h3>Progression of scope</h3>
+          <p>From analyst and systems leadership into enterprise technology strategy, executive operating partnership, budget ownership, vendor governance, cybersecurity oversight, and Board-facing communication.</p>
+        </article>
+        <article class="panel">
+          <h3>Progression of complexity</h3>
+          <p>From operational reporting and ERP environments into institutional platforms, multi-business-line operating models, private equity scale-up, enterprise data ecosystems, automation, and AI-enabled workflows.</p>
+        </article>
+        <article class="panel">
+          <h3>Progression of mandate</h3>
+          <p>Increasing responsibility for integration, standardization, operating discipline, team building, executive alignment, and technology-enabled value creation across fragmented environments.</p>
+        </article>
+      </div>
+      <div class="career-explorer">
+        <article class="panel timeline-control">
+          <div class="timeline-control-header">
+            <div>
+              <span class="section-label">Interactive Timeline</span>
+              <h3 style="margin-top: 8px;">Explore roles by date</h3>
+            </div>
+            <div class="timeline-date" id="timeline-date-label">Jul 2005</div>
+          </div>
+          <input
+            id="career-slider"
+            class="timeline-slider"
+            type="range"
+            min="0"
+            max="249"
+            step="1"
+            value="249"
+            aria-label="Career timeline date slider"
+          >
+          <div class="timeline-marks" aria-hidden="true">
+            <span>2005</span>
+            <span>2010</span>
+            <span>2015</span>
+            <span>2020</span>
+            <span>2026</span>
+          </div>
+          <div class="timeline-summary" id="timeline-summary"></div>
+        </article>
+        <article class="panel" id="timeline-detail-panel">
+          <div class="timeline-role-title">
+            <span class="period" id="timeline-role-period">Dec 2022 - Present</span>
+            <h3 id="timeline-role-company">10 Federal Storage</h3>
+            <p id="timeline-role-title">Vice President, Information Technology</p>
+          </div>
+          <p id="timeline-role-overview">
+            Lead enterprise technology strategy for a rapidly scaling, private-equity-backed operating platform supporting a distributed national footprint.
+          </p>
+          <ul class="timeline-detail-list" id="timeline-role-details"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="leadership" class="grid-2">
+      <article class="quote-card">
+        <span class="section-label">Leadership</span>
+        <blockquote>
+          "The strongest leadership signal is not technical detail alone. It is the ability to create trust, align stakeholders, shape direction, and lead transformation with confidence."
+        </blockquote>
+      </article>
+      <article class="panel">
+        <h3>Leadership philosophy</h3>
+        <p>
+          Trust is treated as a leadership mechanism. Autonomy is paired with accountability. Executive engagement stays close enough to the work to reduce ambiguity without collapsing into micromanagement.
+        </p>
+        <p>
+          The model is built around cross-domain collaboration and executive translation: helping Boards, CEOs, operators, clinicians, and teams align around the same priorities, risks, and decisions.
+        </p>
+        <div class="pill-list">
+          <span class="pill">Trust-first</span>
+          <span class="pill">Autonomy + accountability</span>
+          <span class="pill">Executive translation</span>
+          <span class="pill">Cross-domain leadership</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="snapshot">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">Snapshot</span>
+          <h2>Fast executive scan</h2>
+        </div>
+        <p>
+          A quick synthesis of the operating environments, leadership exposure, and recurring themes across the platform.
+        </p>
+      </div>
+      <div class="grid-3">
+        <article class="panel">
+          <h3>Operating contexts</h3>
+          <p>Multi-site operating companies under scale pressure, institutional environments, founder-led ventures, and portfolio companies shaped by private equity demands.</p>
+        </article>
+        <article class="panel">
+          <h3>Leadership exposure</h3>
+          <p>Boards, investors, CEOs, presidents, executive leadership teams, cross-functional operating leaders, and business stakeholders who depend on clear technology leadership.</p>
+        </article>
+        <article class="panel">
+          <h3>Signature themes</h3>
+          <p>Capability building, operational modernization, acquisition integration, compliance-aware execution, data-driven decision support, and AI-enabled operating infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="grid-2">
+      <article class="panel contact-cta">
+        <span class="section-label">Contact</span>
+        <h2 style="margin-top: 8px;">Start the conversation</h2>
+        <p>
+          Open to conversations with executive recruiters, Boards, investors, and leadership teams evaluating senior technology, data, digital, and transformation leadership.
+        </p>
+        <div class="contact-actions">
+          <a class="button" href="mailto:boaktown14@outlook.com">Email Brian</a>
+          <a class="button-secondary" href="Brian_Oakley_Resume.docx" download>Download Resume</a>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="https://www.linkedin.com/in/brianoakley/" target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <span>View profile</span>
+          </a>
+          <a class="contact-link" href="tel:14435978770">
+            <span>Phone</span>
+            <span>443-597-8770</span>
+          </a>
+          <a class="contact-link" href="mailto:boaktown14@outlook.com">
+            <span>Email</span>
+            <span>boaktown14@outlook.com</span>
+          </a>
+        </div>
+      </article>
+      <article class="panel">
+        <h3>Why engage</h3>
+        <p>
+          The strongest through-line in Brian Oakley's background is the ability to combine executive technology leadership, integration-minded scale-up experience, data platform thinking, and operational discipline into measurable business value.
+        </p>
+        <p style="margin-top: 14px;">
+          For organizations navigating modernization, acquisition integration, operating scale, data strategy, security, and AI-enabled evolution, that combination creates practical executive leverage.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div>Brian Oakley | Technology &amp; Transformation Executive</div>
+      <div>Executive technology leadership profile</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var storageKey = "brian-oakley-executive-theme";
+      var root = document.documentElement;
+      var button = document.getElementById("theme-toggle");
+      var stored = window.localStorage.getItem(storageKey);
+      var initialTheme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+      root.setAttribute("data-theme", initialTheme);
+
+      button.addEventListener("click", function () {
+        var currentTheme = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        var nextTheme = currentTheme === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", nextTheme);
+        window.localStorage.setItem(storageKey, nextTheme);
+      });
+    })();
+
+    (function () {
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+      var sections = navLinks
+        .map(function (link) { return document.querySelector(link.getAttribute("href")); })
+        .filter(Boolean);
+
+      function setActiveLink(id) {
+        navLinks.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+        });
+      }
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          var visible = entries
+            .filter(function (entry) { return entry.isIntersecting; })
+            .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; });
+
+          if (visible.length > 0) {
+            setActiveLink(visible[0].target.id);
+          }
+        }, {
+          rootMargin: "-35% 0px -45% 0px",
+          threshold: [0.2, 0.45, 0.7]
+        });
+
+        sections.forEach(function (section) { observer.observe(section); });
+      }
+
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var targetId = link.getAttribute("href").slice(1);
+          setActiveLink(targetId);
+        });
+      });
+
+      setActiveLink("about");
+    })();
+
+    (function () {
+      var startYear = 2005;
+      var startMonth = 7;
+      var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      var slider = document.getElementById("career-slider");
+      var dateLabel = document.getElementById("timeline-date-label");
+      var summary = document.getElementById("timeline-summary");
+      var rolePeriod = document.getElementById("timeline-role-period");
+      var roleCompany = document.getElementById("timeline-role-company");
+      var roleTitle = document.getElementById("timeline-role-title");
+      var roleOverview = document.getElementById("timeline-role-overview");
+      var roleDetails = document.getElementById("timeline-role-details");
+
+      var roles = [
+        {
+          company: "Cowan Systems",
+          title: "Senior Business Analyst / Lead Systems Analyst",
+          period: "Jul 2005 - Dec 2010",
+          focus: "Led core business systems, acquisition integration, and operational reporting capability in a complex logistics environment where scale and reliability mattered.",
+          startIndex: 0,
+          endIndex: 65,
+          details: [
+            "Directed large-scale acquisition integration efforts spanning business processes, systems transition, data movement, and organizational coordination through the full project lifecycle.",
+            "Served as the connective leader between business stakeholders, end users, vendors, and technical teams across mission-critical ERP, finance, transportation, and integration platforms.",
+            "Led and developed analyst capability across business, financial, and EDI domains while strengthening reporting, ETL, and core systems reliability.",
+            "Established the foundational leadership pattern that carries through the later executive roles: reduce fragmentation, standardize operations, improve management visibility, and create more disciplined execution."
+          ]
+        },
+        {
+          company: "Johns Hopkins Applied Physics Laboratory",
+          title: "Report Developer / Data Analyst",
+          period: "Dec 2010 - Jun 2011",
+          focus: "Supported high-rigor analytical and reporting environments where credibility, precision, and disciplined information design were essential.",
+          startIndex: 65,
+          endIndex: 71,
+          details: [
+            "Developed analytical reporting structures and operational measurement capabilities that supported disciplined decision-making in a highly structured environment.",
+            "Operated in a setting where technical rigor, precision, and stakeholder confidence were central to leadership credibility.",
+            "Strengthened the ability to lead through information quality and analytical clarity in a complex, high-accountability context."
+          ]
+        },
+        {
+          company: "Travel Advantage Network",
+          title: "Senior Business Analyst / Business Intelligence Developer",
+          period: "Jun 2011 - Feb 2012",
+          focus: "Led business intelligence, ERP reporting recovery, and management visibility improvement in a high-friction operating environment.",
+          startIndex: 71,
+          endIndex: 79,
+          details: [
+            "Led reporting, dashboarding, and data infrastructure work tied directly to executive visibility, operating stability, and business performance.",
+            "Drove ERP data-cleansing and reporting recovery efforts where unreliable information created friction and reduced management confidence.",
+            "Managed project timelines, junior staff development, and end-to-end BI enhancement work in an environment that required practical leadership under pressure."
+          ]
+        },
+        {
+          company: "T. Rowe Price",
+          title: "Senior Solutions Analyst / Project Lead",
+          period: "Feb 2012 - Jun 2015",
+          focus: "Led institutional data and analytical platform work in a highly governed financial services environment with strong expectations for quality, transparency, and execution discipline.",
+          startIndex: 79,
+          endIndex: 119,
+          details: [
+            "Led teams delivering end-to-end analytical and data solutions for Fixed Income and Investment Research initiatives with direct relevance to portfolio decision-making.",
+            "Participated in leadership councils shaping standards, process design, and business-improvement priorities across project areas.",
+            "Directed vendor data integration, metadata framework design, and platform architecture supporting auditability, transparency, and high-value decision support.",
+            "Added institutional governance maturity, risk awareness, and enterprise-scale process discipline to the executive leadership progression."
+          ]
+        },
+        {
+          company: "Realterm",
+          title: "Director, Business Intelligence",
+          period: "Jun 2015 - Nov 2016",
+          focus: "Owned enterprise business intelligence strategy, data architecture, and governance foundations that improved executive transparency and established the groundwork for enterprise-scale technology leadership.",
+          startIndex: 119,
+          endIndex: 135,
+          details: [
+            "Established enterprise-wide BI and data warehouse strategy aligned to business, executive, and investor reporting needs across the platform.",
+            "Architected consolidated data frameworks, governance standards, and master data disciplines that improved transparency, consistency, and decision support across business units.",
+            "Created the data and reporting foundation that enabled stronger operating visibility and positioned the organization to scale with greater discipline."
+          ]
+        },
+        {
+          company: "Realterm",
+          title: "Vice President, Information Technology",
+          period: "Nov 2016 - Nov 2022",
+          focus: "Served as the senior technology executive guiding enterprise strategy, operating scale, cybersecurity, governance, and technology-enabled value creation across a rapidly expanding private equity investment platform.",
+          startIndex: 136,
+          endIndex: 208,
+          details: [
+            "Directed enterprise technology strategy during growth from roughly $1B to $12B AUM across four business lines, aligning technology priorities to scale, governance, and enterprise complexity.",
+            "Led enterprise systems supporting facilities management, construction execution, portfolio-level reporting, and broader operating workflows across multiple funds and operating environments.",
+            "Owned multi-million-dollar budgets, vendor negotiations, governance frameworks, cybersecurity expectations, and executive communication around priorities, risk, and delivery.",
+            "Worked closely with operations leadership and investment teams to improve transparency into asset-level performance, support underwriting-informed decision processes, and strengthen disciplined capital allocation."
+          ]
+        },
+        {
+          company: "10 Federal Storage",
+          title: "Vice President, Information Technology",
+          period: "Dec 2022 - Present",
+          focus: "Acts as the senior technology leader for a scaling private-equity-backed operating platform, owning enterprise technology strategy, organizational buildout, platform modernization, data architecture, automation, and AI enablement.",
+          startIndex: 209,
+          endIndex: 249,
+          details: [
+            "Built the technology organization from the ground up to support a national operating footprint, establishing leadership structure, standards, priorities, and operating discipline.",
+            "Defined and executed enterprise platform modernization initiatives spanning data architecture, automation, AI-enabled customer workflows, and cloud-based integration infrastructure.",
+            "Designed and implemented a unified enterprise data platform that improved reporting transparency and decision speed across the organization while enabling analytics, automation, and AI use cases.",
+            "Introduced automation and computer-vision-supported operating processes that materially reduced manual workload, improved execution accuracy, and reinforced a strategy focused on scalability, reliability, and measurable operational impact."
+          ]
+        }
+      ];
+
+      function getDateFromIndex(index) {
+        var monthOffset = Number(index);
+        var zeroBasedMonth = startMonth - 1 + monthOffset;
+        var year = startYear + Math.floor(zeroBasedMonth / 12);
+        var month = zeroBasedMonth % 12;
+        return monthNames[month] + " " + year;
+      }
+
+      function getActiveRole(index) {
+        var numericIndex = Number(index);
+        for (var i = 0; i < roles.length; i += 1) {
+          if (numericIndex >= roles[i].startIndex && numericIndex <= roles[i].endIndex) {
+            return roles[i];
+          }
+        }
+        return roles[roles.length - 1];
+      }
+
+      function renderSummary(activeCompany, activeTitle) {
+        summary.innerHTML = "";
+        roles.slice().reverse().forEach(function (role) {
+          var isPriorityRole = role.company === "10 Federal Storage" || role.company === "Realterm";
+          var item = document.createElement("button");
+          item.type = "button";
+          item.className = "timeline-summary-item" +
+            (isPriorityRole ? " priority" : "") +
+            (role.company === activeCompany && role.title === activeTitle ? " active" : "");
+          item.setAttribute("aria-pressed", role.company === activeCompany && role.title === activeTitle ? "true" : "false");
+          item.setAttribute("data-role-index", String(role.startIndex));
+          item.innerHTML =
+            "<span>" + role.period + "</span>" +
+            "<strong>" + role.company + "</strong>" +
+            "<p>" + role.title + "</p>" +
+            (isPriorityRole ? "<small>Closest Match</small>" : "");
+          item.addEventListener("click", function () {
+            var selectedIndex = Math.floor((role.startIndex + role.endIndex) / 2);
+            slider.value = String(selectedIndex);
+            renderRole(selectedIndex);
+          });
+          summary.appendChild(item);
+        });
+      }
+
+      function renderRole(index) {
+        var activeRole = getActiveRole(index);
+        dateLabel.textContent = getDateFromIndex(index);
+        rolePeriod.textContent = activeRole.period;
+        roleCompany.textContent = activeRole.company;
+        roleTitle.textContent = activeRole.title;
+        roleOverview.textContent = activeRole.focus;
+        roleDetails.innerHTML = "";
+        activeRole.details.forEach(function (detail) {
+          var item = document.createElement("li");
+          item.textContent = detail;
+          roleDetails.appendChild(item);
+        });
+        renderSummary(activeRole.company, activeRole.title);
+      }
+
+      slider.addEventListener("input", function (event) {
+        renderRole(event.target.value);
+      });
+
+      renderRole(slider.value);
+    })();
+  </script>
+</body>
+</html>

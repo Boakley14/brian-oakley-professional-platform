@@ -1,0 +1,4 @@
+node_modules/
+.next/
+next-start*.log
+next-start*.err.log
