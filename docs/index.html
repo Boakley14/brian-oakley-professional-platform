@@ -391,6 +391,52 @@
       font-size: 0.97rem;
     }
 
+    .portfolio-card {
+      display: grid;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .portfolio-card .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+    }
+
+    .portfolio-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .portfolio-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface-strong) 86%, transparent);
+      color: var(--ink);
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+    }
+
+    .portfolio-link:hover,
+    .portfolio-link:focus-visible {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--accent-strong) 40%, transparent);
+      background: color-mix(in srgb, var(--mist) 72%, transparent);
+      outline: none;
+    }
+
     .career-overview {
       display: grid;
       gap: 20px;
@@ -736,6 +782,7 @@
         <a href="#about">About</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#transformations">Transformations</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#career">Career</a>
         <a href="#leadership">Leadership</a>
         <a href="#snapshot">Snapshot</a>
@@ -965,6 +1012,39 @@
       </div>
     </section>
 
+    <section id="portfolio">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">Portfolio</span>
+          <h2>Selected digital work</h2>
+        </div>
+        <p>
+          In addition to executive platform and operating model work, Brian has led and shaped product-grade experiences that translate architecture, data strategy, and enterprise modernization into something tangible and easy to understand.
+        </p>
+      </div>
+      <article class="panel portfolio-card">
+        <span class="eyebrow">Featured Portfolio Item</span>
+        <div class="feature-meta"><span class="badge">Interactive</span><span>10 Federal</span></div>
+        <h3>Unified Data Platform Architecture Experience</h3>
+        <p>
+          An interactive architecture presentation that showcases how a modern enterprise data platform can unify operational systems, analytics, automation, and AI enablement into a single executive-ready narrative.
+        </p>
+        <div class="case-structure">
+          <div class="case-block">
+            <strong>What it shows</strong>
+            <p>A polished walkthrough of platform layers, information flow, integration design, and the operating model required to turn fragmented data assets into an enterprise capability.</p>
+          </div>
+          <div class="case-block">
+            <strong>Why it matters</strong>
+            <p>It demonstrates the ability to connect technical architecture with business clarity, making complex platform strategy accessible to leadership, partners, and stakeholders.</p>
+          </div>
+        </div>
+        <div class="portfolio-actions">
+          <a class="portfolio-link" href="UDP-Architecture-10-Federal.html" target="_blank" rel="noreferrer">Open Architecture Experience</a>
+        </div>
+      </article>
+    </section>
+
     <section id="career">
       <div class="section-heading">
         <div>
@@ -1086,7 +1166,7 @@
         <span class="section-label">Contact</span>
         <h2 style="margin-top: 8px;">Start the conversation</h2>
         <p>
-          Open to conversations with executive recruiters, Boards, investors, and leadership teams evaluating senior technology, data, digital, and transformation leadership.
+          If you are hiring for a senior technology leadership role or evaluating transformation leadership for a complex business, let's connect.
         </p>
         <div class="contact-actions">
           <a class="button" href="mailto:boaktown14@outlook.com">Email Brian</a>
